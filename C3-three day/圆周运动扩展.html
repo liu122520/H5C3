@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div {
+				width: 50px;
+				height: 50px;
+				background: red;
+				
+				/* 圆球*/
+				border-radius: 50%;
+				
+				position: absolute;
+				
+			}
+			#box1{
+				left: 400px;
+				top: 400px;
+			}
+			#box2{
+				left: 200px;
+				top: 400px;
+			}
+			#box3{
+				left: 300px;
+				top: 500px;
+			}
+			#box4{
+				left: 200px;
+				top: 200px;
+			}
+			#box5{
+				left: 500px;
+				top: 200px;
+			}
+		</style>
+		
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<div id="box3"></div>
+		<div id="box4"></div>
+		<div id="box5"></div>
+			
+		
+		
+	</body>
+	<script type="text/javascript" src="../C3-two day/js/jquery-3.2.1.js">
+		
+	</script>
+	<script type="text/javascript">
+	var box1 = document.getElementById("box1")
+	var box2 = document.getElementById("box2")
+	var box3 = document.getElementById("box3")
+	var box4 = document.getElementById("box4")
+	var box5 = document.getElementById("box5")
+	setInterval(zd(100,box1,400,400,100),300)
+	setInterval(zd(100,box2,200,400,130),500)
+	setInterval(zd(100,box3,300,500,150),100)
+	setInterval(zd(100,box4,200,200,60),200)
+	setInterval(zd(100,box5,500,200,80),600)
+	
+	function zd(r,box,left,top,time){
+		function zh(a){
+			//转换角度为弧度
+			return Math.PI* a / 180
+		}
+//		var r = 100;	//定义半径
+		var d = 0;		//定义角度
+		setInterval(function(){
+			var x = r*Math.cos(zh(d)) + left
+			var y = r*Math.sin(zh(d)) + top
+			box.style.left = x +"px"
+			box.style.top = y +"px"
+			d+=10
+		},time)
+		}
+	</script>
+</html>

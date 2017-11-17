@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 800px;
+			height: 130px;
+			border: 10px solid red;
+			position: relative;
+			overflow: hidden;
+			margin: 100px auto;
+			
+		}
+		.box .aaa{
+			width: 5000px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			animation: run 2s linear 0s infinite;
+		}
+		.aaa ul{
+			list-style: none;
+		}
+		.aaa ul li{
+			float: left;
+			margin-right: 10px;
+		}
+		.box:hover .aaa{
+			animation-play-state: paused;
+		}
+		@-webkit-keyframes run{
+			from{left: 0;}
+			to{left: -2100px;}
+		}
+	</style>
+	<body>
+		<div class="box" id="box">
+			<div class="aaa" id="aaa">
+				<ul>
+					<li><a href=""><img src="img/0.png" alt="" /></a></li>
+					<li><a href=""><img src="img/1.png" alt="" /></a></li>
+					<li><a href=""><img src="img/2.png" alt="" /></a></li>
+					<li><a href=""><img src="img/3.png" alt="" /></a></li>
+					<li><a href=""><img src="img/4.png" alt="" /></a></li>
+					<li><a href=""><img src="img/5.png" alt="" /></a></li>
+					<li><a href=""><img src="img/6.png" alt="" /></a></li>
+					<li><a href=""><img src="img/7.png" alt="" /></a></li>
+					<li><a href=""><img src="img/8.png" alt="" /></a></li>
+					<li><a href=""><img src="img/9.png" alt="" /></a></li>
+					<li><a href=""><img src="img/0.png" alt="" /></a></li>
+					<li><a href=""><img src="img/1.png" alt="" /></a></li>
+					<li><a href=""><img src="img/2.png" alt="" /></a></li>
+					<li><a href=""><img src="img/3.png" alt="" /></a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

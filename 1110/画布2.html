@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+				#canvas{
+					border: 1px solid red;
+					
+				}
+		</style>
+		</head>
+		<body>
+			<canvas id="canvas" width="800" height="800">
+				
+			</canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas")
+		
+		var ctx = canvas.getContext("2d")
+		for (var i = 60; i < 600; i++) {
+			ctx.beginPath();
+			ctx.arc(i,i,i,0,1.5*Math.PI,true)
+			ctx.stroke()
+			ctx.closePath()
+		}
+	</script>
+</html>

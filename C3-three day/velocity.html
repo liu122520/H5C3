@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+				width: 200px;
+				height: 130px;
+				border: 1px solid #000000;
+				perspective: 1000px;
+			}
+			img{
+				border: 1px solid #000000;
+			}
+			/*p{
+				width: 258px;
+				height: 258px;
+				background: red;
+			}*/
+	</style>
+	<body>
+		<input type="button" name="" id="" value="点我" />
+		<div>
+			<img src="../C3-two day/img/1.png"/>
+		</div>
+		
+		<p>p</p>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.1.js">
+		
+	</script>
+	<script type="text/javascript" src="js/velocity.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$("input").click(function(){
+			$("img").velocity({
+				"rotateZ":"45deg"
+			},1000,function(){
+				$("img").fadeOut()
+			})
+		})
+	</script>
+</html>

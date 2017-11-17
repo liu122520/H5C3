@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 300px;
+				height: 500px;
+				border: 1px solid red;
+			}
+			.zzz{
+				width:100px;
+				height:100px;
+				background: red;
+				text-align: center;
+				line-height: 100px;
+			}
+			div{
+				width: 300px;
+				height: 400px;
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="button" value="1" class="zzz"/>
+			<input type="button" value="2"/>
+			<input type="button" value="3"/>
+			<div style="display: block;">1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementsByClassName("box")
+		var zzz = box.getElementsByTagName("input")
+		var xxx = box.getElementsByTagName("div")
+		for(var i = 0 ; i < zzz.length ; i++){
+			zzz[i].index = i;
+			zzz[i].onclick = function(){
+				for (var j = 0 ; j < zzz.length ; j++) {
+					zzz[j].className = ""
+					xxx[j].style.display= "none"
+				}
+				this.className = "zzz"
+				xxx[this.index].style.display = "block"
+			}
+		}
+	</script>
+</html>

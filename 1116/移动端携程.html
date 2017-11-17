@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/cssreset-min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="soso">
+				<div class="soso_box">
+					<input type="text" placeholder="搜索：目的地、酒店" />
+				</div>
+				<div class="user">
+					<a href="">我的</a>
+				</div>
+			</div>
+		</header>
+		<section class="banner">
+			
+		</section>
+		
+		<!--导航部分-->
+		<nav>
+			<div class="row">
+				<ul>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+					<li>
+						<div><a href="#">去哪</a></div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</body>
+	<script type="text/javascript">
+		var banner = document.querySelector(".banner");
+		setBanner();
+		
+		window.onresize = setBanner;
+		
+		function setBanner(){
+			var bannerWidth = parseInt(getComputedStyle(banner)["width"])
+			
+			
+			
+			banner.style.height =  bannerWidth / (750/150)+"px";
+			
+		}
+	</script>
+</html>

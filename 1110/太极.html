@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		#canvas{
+			border: 1px solid red;
+			background: blue;
+		}
+	</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800">
+			
+		</canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas")
+		
+		var ctx = canvas.getContext("2d")
+		
+		ctx.fillStyle = "#FFFFFF"
+		ctx.beginPath();
+		ctx.arc(300,200,150,-0.5*Math.PI,0.5*Math.PI,false)
+		ctx.closePath()
+		ctx.fill()
+		
+		ctx.fillStyle = "#000"
+		ctx.beginPath();
+		ctx.arc(300,200,150,-0.5*Math.PI,0.5*Math.PI,true)
+		ctx.closePath()
+		ctx.fill()
+		
+		ctx.fillStyle = "#FFFFFF"
+		ctx.beginPath();
+		ctx.arc(300,275,75,-0.5*Math.PI,2*Math.PI,false)
+		ctx.closePath()
+		ctx.fill()
+		
+		ctx.fillStyle = "#000"
+		ctx.beginPath();
+		ctx.arc(300,125,75,-0.5*Math.PI,2*Math.PI,false)
+		ctx.closePath()
+		ctx.fill()
+		
+		ctx.fillStyle = "#000"
+		ctx.beginPath();
+		ctx.arc(300,275,30,-0.5*Math.PI,2*Math.PI,false)
+		ctx.closePath()
+		ctx.fill()
+		
+		ctx.fillStyle = "#FFFFFF"
+		ctx.beginPath();
+		ctx.arc(300,125,30,-0.5*Math.PI,2*Math.PI,false)
+		ctx.closePath()
+		ctx.fill()
+		
+		ctx.font = "80px 微软雅黑";
+		ctx.fillText("这是太极！",100,500)
+	</script>
+</html>

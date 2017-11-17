@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style>
+			
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+				
+				/* 圆球*/
+				border-radius: 50%;
+				
+				position: absolute;
+				left: 300px;
+				top: 200px;
+			}
+			
+		</style>
+		
+		<div id="box"></div>
+		<div>
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../C3-two day/js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		function zh(a){
+			//转换角度为弧度
+			return Math.PI* a / 180
+		}
+		var r = 100;	//定义半径
+		var d = 0;		//定义角度
+		var box = document.getElementById("box")
+		setInterval(function(){
+			var x = r*Math.cos(zh(d)) + 300
+			var y = r*Math.sin(zh(d)) + 200
+			box.style.left = x +"px"
+			box.style.top = y +"px"
+			d+=10
+		},100)
+		
+	</script>
+</html>

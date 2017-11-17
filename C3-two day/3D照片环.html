@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: black;
+				cursor: pointer;
+			}
+			#audio{
+				width: 1000px;
+				height: 500px;
+				perspective: 1000px;
+				margin: 0 auto;
+			}
+			#audio #box{
+				width: 1000px;
+				height: 500px;
+				position: relative;
+				
+				transform-style: preserve-3d;
+				transition: all 3s;
+			}
+			#audio #box ul{
+				list-style: none;
+			}
+			#audio #box ul li{
+				position: absolute;
+				left: 400px;
+				top: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="audio">
+			<div id="box">
+				<ul>
+					<li><img src="img/1.png"/></li>
+					<li><img src="img/2.png"/></li>
+					<li><img src="img/3.png"/></li>
+					<li><img src="img/4.png"/></li>
+					<li><img src="img/5.png"/></li>
+					<li><img src="img/6.png"/></li>
+					<li><img src="img/7.png"/></li>
+					<li><img src="img/8.png"/></li>
+					<li><img src="img/9.png"/></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$("#box ul li").each(function(i){
+			$(this).css("transform","rotateY(" +40*i+ "deg) translateZ(400px)")
+		})
+		$("#audio").mousedown(function(e){
+			console.log("jinglai")
+			e.preventDefault();			
+			var startX = e.clientX;
+			var startY = e.clientY;
+			$(document).mousemove(function(e){
+				var dataX = e.clientX - startX;
+				var dataY = e.clientY - startY;
+				console.log(dataX)
+				$("#box").css("transform","rotateX(" +(-dataY/5)+ "deg)rotateY(" + -dataX/5+ "deg)" )
+			})
+			$(document).mouseup(function(){
+				$(document).off("mousemove")
+			})
+		})
+	</script>
+</html>

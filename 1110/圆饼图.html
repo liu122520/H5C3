@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		#canvas{
+			border: 1px solid red;
+			background: blue;
+		}
+	</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800">
+			
+		</canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas")
+		
+		var ctx = canvas.getContext("2d")
+		
+		ctx.fillStyle = "#0000FF";
+		ctx.storkeStyle = "pink";
+		
+		ctx.beginPath();
+		ctx.moveTo(100,100);
+		
+		function kai(aaa){
+			ctx.arc(100,100,80,-0.5*Math.PI,aaa*(2*Math.PI)-Math.PI/2,false);
+			ctx.closePath()
+			ctx.fill()	
+//			ctx.storke()
+		}
+		var num = 0;
+		var timer = null;
+		function dong(x){
+			timer = setInterval(function(){
+				if (num > x) {
+					kai(x)
+					clearInterval(timer)
+				}else{
+					kai(num)
+					num+=0.05
+				}
+			},10)
+		}
+		dong(0.6)
+	</script>
+</html>
